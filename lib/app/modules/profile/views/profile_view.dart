@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../../core/constants/assets.dart';
+import '../../auth/views/auth_view.dart';
+import '../../auth/controllers/auth_controller.dart';
 import '../../widgets/svg_icon.dart';
 import '../controllers/profile_controller.dart';
 
@@ -58,7 +60,12 @@ class ProfileView extends GetView<ProfileController> {
               ),
               IconButton(
                 icon: const Icon(Icons.logout, color: Color(0xFFFF8733)),
-                onPressed: () {},
+                onPressed: () {
+                  // Реєструємо AuthController перед навігацією
+                  Get.put(AuthController());
+                  // Переходимо до AuthView
+                  Get.offAll(() => AuthView());
+                },
               )
             ],
           ),
