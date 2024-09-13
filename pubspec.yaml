@@ -1,0 +1,48 @@
+name: language_learning_app
+description: A language learning application using Flutter and GetX.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get: ^4.6.6
+  http: ^1.2.2
+  shared_preferences: ^2.3.2
+  flutter_svg: ^2.0.10
+  cached_network_image: ^3.4.1
+  cupertino_icons: ^1.0.8
+  progress_line: ^0.1.0
+  image_picker: 1.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:  
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+  fonts:
+    - family: SF Pro Display
+      fonts:
+        - asset: fonts/SF-Pro-Display-Regular.otf
+          weight: 400
+        - asset: fonts/SF-Pro-Display-Bold.otf
+          weight: 700
+    - family: Helvetica
+      fonts:
+        - asset: fonts/Helvetica-Bold.ttf
+          weight: 700
+
+flutter_assets:
+  assets_path: assets/
+  output_path: lib/app/core/constants/
+  filename: assets.dart
+  field_prefix: resource
