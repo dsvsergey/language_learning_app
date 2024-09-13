@@ -1,8 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../data/models/user_model.dart';
-import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+
+import '../../../data/models/user_model.dart';
 
 class ProfileController extends GetxController {
   final Rx<User> user = User(
